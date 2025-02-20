@@ -63,40 +63,92 @@ console.log('media valori', array5002)
 // 4-restituire il valore piu basso e il piu alto
 
 function minValueAndMaxValueArray(arrayOfNumbers){
-    const newArray = []
-
+    
+   let minim = arrayOfNumbers[0];
+   let maxi = arrayOfNumbers[0]
     for (let i = 0; i < arrayOfNumbers.length; i++) {
        let element = arrayOfNumbers[i];
-       minim = 0;
-       maxi = 0
-     if (element<= minim ) {
+       
+     if (element< minim ) {
         minim = element
          
    
-     }else if(element => maxi){
+     } if(element > maxi){
         maxi = element
 
      }
+     
        }
       
-   
-       
-   
-    return newArray
+       return [minim, maxi]
 }
 
-const array5001 = convertToFahrenheit(array1)
-console.log('valori in fahrenheit', array5001)
+const array5003 = minValueAndMaxValueArray(array1)
+console.log('valori min e max', array5003)
 
 
 const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella', ]
 //5-filtrare tutti i nomi piu grandi di 4 caratteri
+
+
+const filtraNomi = [];
+
+for (let i = 0; i < array2.length; i++) {
+  if (array2[i].length > 4) {
+    filtraNomi.push(array2[i]);
+  }
+}
+
+console.log(filtraNomi);
 //6-trasformare tutte le stringe in maiuscolo
+
+const arrayMaiuscolo = [];
+
+for (let i = 0; i < array2.length; i++) {
+  arrayMaiuscolo.push(array2[i].toUpperCase());
+}
+
+console.log
 //7-mettere solo le iniziali maiuscole
+
+const arrayInizialiMaiuscole = [];
+
+for (let i = 0; i < array2.length; i++) {
+  let nome = array2[i];
+  let primaLettera = nome[0].toUpperCase();
+  let restoNome = nome.slice(1).toLowerCase();
+  let nomeInizialiMaiuscole = primaLettera + restoNome;
+  arrayInizialiMaiuscole.push(nomeInizialiMaiuscole);
+}
+
+console.log
 //8-restituire una stringa composta dalle iniziale delle parole
+let iniziali = '';
+
+for (let i = 0; i < array2.length; i++) {
+  let parola = array2[i];
+  iniziali += parola[0];
+}
+
+console.log
 //9-contare tutti i carateri di tutte le stringhe
+
+let contaCaratteri = 0;
+
+for (let i = 0; i < array2.length; i++) {
+  contaCaratteri += array2[i].length;
+}
+
+console.log('Il numero totale di caratteri è:', 
 //10-eliminare le vocali dalle stringhe
 //11-restituire un array di numeri che sono le lunghezze delle singole parole
+const lunghezze = [];
+
+for (let i = 0; i < array2.length; i++) {
+  lunghezze.push(array2[i].length);
+}
+
+console.log
 
 
 const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]]
