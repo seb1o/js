@@ -38,4 +38,7 @@
 
 //eserc 3 
 
+
+let prompt('Inserisci la parola:');
+parseInt((parola))
 function countBs()
