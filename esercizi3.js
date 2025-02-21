@@ -60,12 +60,12 @@ function mediumValeu(arrayOfNumbers){
 const array5002 = mediumValeu(array1)
 console.log('media valori', array5002)
 
-// 4-restituire il valore piu basso e il piu alto
+// 4-restituire il valore piu basso e il piu alto 
 
 function minValueAndMaxValueArray(arrayOfNumbers){
-    
-   let minim = arrayOfNumbers[0];
-   let maxi = arrayOfNumbers[0]
+      
+   let minim = arrayOfNumbers[0];  // si puo usare anche - e +infinite
+   let maxi = arrayOfNumbers[0]   
     for (let i = 0; i < arrayOfNumbers.length; i++) {
        let element = arrayOfNumbers[i];
        
@@ -139,19 +139,79 @@ for (let i = 0; i < array2.length; i++) {
   contaCaratteri += array2[i].length;
 }
 
-console.log('Il numero totale di caratteri è:', 
+console.log('Il numero totale di caratteri è:'), 
 //10-eliminare le vocali dalle stringhe
-//11-restituire un array di numeri che sono le lunghezze delle singole parole
-const lunghezze = [];
 
-for (let i = 0; i < array2.length; i++) {
-  lunghezze.push(array2[i].length);
-}
+// let vowel = [a, e, i, o, u]
 
-console.log
+// function removeVowel(arrayOfCaracters){
+
+// const noVowel = []
+
+// for (let i = 0; i < arrayOfCaracters.length; i++) {
+//            const element = arrayOfCaracters[i];
+
+//            if (element=) {
+            
+//            }
+// }
 
 
-const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]]
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //11-restituire un array di numeri che sono le lunghezze delle singole parole
+// const lunghezze = [];
+
+// for (let i = 0; i < array2.length; i++) {
+//   lunghezze.push(array2[i].length);
+// }
+
+// console.log
+
+
+// const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]]
 
 //12-restituire un array di numeri che sono le lunghezze dei singoli array
-//13
+//13 sommare tutti i numeri in tutti gli array
+
+  function sumAllNumbers(arrayToReduce) {
+
+    let accumulator11 = 0;
+    for (const singleArray of arrayToReduce) {
+      for (const number of singleArrays) {
+        accumulator11 += number;
+      }
+
+    }
+    return accumulator11;
+  }
+
+const resultSumAllNumbers = sumAllNumbers(array3)
+console.log(resultSumAllNumbers)
